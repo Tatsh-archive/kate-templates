@@ -1,0 +1,23 @@
+katetemplate: Template=Portage Ebuild DocumentName=%N.ebuild
+katetemplate: Group=Scripts highlight=Bash
+katetemplate: Description=This creates a suitable beginning of a Portage ebuild.
+katetemplate: Author= Andrew Udvare <audvare@gmail.com>
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+EAPI=4
+
+DESCRIPTION="${cursor}"
+HOMEPAGE=""
+SRC_URI=""
+
+LICENSE=""
+SLOT="0"
+KEYWORDS="~amd64"
+IUSE=""
+
+DEPEND=""
+RDEPEND="\${DEPEND}"
+
+# kate: replace-tabs false;
