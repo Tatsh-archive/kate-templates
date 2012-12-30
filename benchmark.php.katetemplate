@@ -1,0 +1,24 @@
+katetemplate: Template=PHP Iterative Benchmark DocumentName=%NIterativeBenchmarkTest.php
+katetemplate: Group=Scripts highlight=PHP/PHP
+katetemplate: Description=A simple iterative benchmark test template.
+katetemplate: Author= Andrew Udvare <audvare@gmail.com>
+#!/usr/bin/env php
+<?php
+require 'Benchmark/Iterate.php';
+
+function test1() {
+    ${cursor}
+}
+
+function test2() {
+}
+
+$benchmark = new Benchmark_Iterate;
+$benchmark->run(1000, 'test1');
+$get = $benchmark->get();
+printf("%s: %.5f\n", 'test1()', $get['mean']);
+
+$benchmark = new Benchmark_Iterate;
+$benchmark->run(1000, 'test2');
+$get = $benchmark->get();
+printf("%s: %.5f\n", 'test2()', $get['mean']);
